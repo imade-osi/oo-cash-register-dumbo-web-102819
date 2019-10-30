@@ -10,7 +10,9 @@ class CashRegister
    end 
     
    def add_item(item, price, multiplier = 1)
-      multiplier.times do @items << item
+      multiplier.times do 
+        @items << item
+      end 
       
       @total += (price * multiplier)
    end 
@@ -29,7 +31,5 @@ class CashRegister
     def items 
        @items
     end 
-    
-    
     
 end 
