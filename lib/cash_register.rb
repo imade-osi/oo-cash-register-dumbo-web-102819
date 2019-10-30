@@ -1,15 +1,16 @@
 class CashRegister
     
-    ITEMS = [] 
+   
     attr_accessor :total, :discount 
     
    def initialize(given_discount = 100) 
        @total = 0 
        @discount = given_discount 
+       @items = []
    end 
     
    def add_item(item, price, multiplier = 1)
-      multiplier.times do ITEMS << item
+      multiplier.times do @items << item
       
       @total += (price * multiplier)
    end 
@@ -26,7 +27,7 @@ class CashRegister
     end 
     
     def items 
-       ITEMS
+       @items
     end 
     
     
