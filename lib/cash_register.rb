@@ -10,7 +10,9 @@ class CashRegister
    end 
     
    def add_item(item, price, multiplier = 1)
-      multiplier.times do 
+      @price = price
+      
+        multiplier.times do 
         @items << item
       end 
       
@@ -33,7 +35,7 @@ class CashRegister
     end 
     
     def void_last_transaction
-      @total = @total - 
+      @total = @total - @price 
     end 
     
 end 
